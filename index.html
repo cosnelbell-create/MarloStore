@@ -424,7 +424,7 @@
           <i class="fa-solid fa-bag-shopping text-lg"></i>
           <span id="cart-count" class="cart-count">0</span>
         </button>
-        <a href="https://wa.me/message/U3AUHWUIXGFQC1" target="_blank"
+        <a href="https://wa.me/22956967812" target="_blank"
            class="wa-float bg-[#25D366] hover:bg-[#20ba58] text-white px-5 py-2.5 rounded-full flex items-center gap-2 text-xs font-semibold tracking-wide uppercase transition-colors shadow-lg">
           <i class="fa-brands fa-whatsapp text-base"></i>
           <span class="hidden sm:inline">Commander</span>
@@ -525,7 +525,7 @@
   </div>
 
   <script>
-    const WA_NUMBER = "U3AUHWUIXGFQC1"; // WhatsApp link ID
+    const WA_NUMBER = "22956967812";
 
     const products = [
       // ===== PARFUM =====
@@ -601,21 +601,16 @@
     let cart = [];
     let currentFilter = 'all';
 
-    // ─── WhatsApp helpers ──────────────────────────────────────────────
+    // ─── Helpers ───────────────────────────────────────────────────────
     function formatPrice(price) {
       return price.toLocaleString('fr-FR') + ' FCFA';
     }
 
-    /**
-     * Ouvre WhatsApp avec un message pré-rempli contenant le nom et le prix du produit.
-     * @param {string} name  – nom du produit
-     * @param {number} price – prix en FCFA
-     */
     function openWhatsApp(name, price) {
       const msg = encodeURIComponent(
         `Bonjour, je souhaite commander le produit *${name}* au prix de *${formatPrice(price)}*.`
       );
-      window.open(`https://wa.me/message/${WA_NUMBER}?text=${msg}`, '_blank');
+      window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
     }
 
     // ─── Render products ───────────────────────────────────────────────
@@ -811,7 +806,7 @@
       const msg = encodeURIComponent(
         `Bonjour ! Je souhaite commander :\n\n${lines}\n\n*Total : ${formatPrice(total)}*\n\nMerci de confirmer ma commande 🙏`
       );
-      window.open(`https://wa.me/message/${WA_NUMBER}?text=${msg}`, '_blank');
+      window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
       cart = [];
       updateCartCount();
       toggleCart();
